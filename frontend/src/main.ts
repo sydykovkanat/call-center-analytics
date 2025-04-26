@@ -1,7 +1,8 @@
 import { definePreset } from '@primeuix/themes';
 import Aura from '@primeuix/themes/aura';
 import { VueQueryPlugin } from '@tanstack/vue-query';
-import { createPinia } from 'pinia';
+import { createPinia, type PiniaPlugin } from 'pinia';
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import 'primeicons/primeicons.css';
 import PrimeVue from 'primevue/config';
 import ToastService from 'primevue/toastservice';
@@ -31,6 +32,7 @@ const CustomPreset = definePreset(Aura, {
 });
 
 const app = createApp(App);
+const pinia = createPinia();
 app.use(PrimeVue, {
 	locale: ru,
 	theme: {
@@ -40,7 +42,8 @@ app.use(PrimeVue, {
 		},
 	},
 });
-app.use(createPinia());
+app.use(pinia);
+pinia.use(piniaPluginPersistedstate as PiniaPlugin);
 app.use(router);
 app.use(VueQueryPlugin);
 app.use(ToastService);

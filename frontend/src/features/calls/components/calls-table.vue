@@ -7,12 +7,16 @@
 		:value="calls"
 		tableStyle="min-width: 50rem"
 		v-if="calls.length > 0"
+		stripedRows
+		paginator
+		:rows="10"
+		:rowsPerPageOptions="[5, 10, 20, 50]"
 	>
 		<Column field="id" header="ID" />
 
 		<Column field="caller_number" header="Номер звонящего" />
 
-		<Column field="start_time" header="Время начала">
+		<Column field="start_time" header="Время начала" :sortable="true">
 			<template #body="{ data }">
 				{{ format(data.start_time, 'dd.MM.yyyy hh:mm') }}
 			</template>
@@ -58,7 +62,7 @@
 			</template>
 		</Column>
 
-		<Column field="agent_id" header="Оператор" />
+		<Column field="agent_id" header="Оператор" :sortable="true" />
 	</DataTable>
 </template>
 

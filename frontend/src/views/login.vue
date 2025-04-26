@@ -24,10 +24,38 @@
 </template>
 
 <script setup lang="ts">
+import { isAxiosError } from 'axios';
+import { isArray } from 'chart.js/helpers';
+import { useToast } from 'primevue';
+import { useRouter } from 'vue-router';
+
 import LoginForm from '@/features/login/components/LoginForm.vue';
 import type { ILoginMutation } from '@/features/login/types';
+import { useLoginStore } from '@/stores';
 
-const handleLoginSubmit = (formData: ILoginMutation) => {
-	console.log('Получены данные из формы:', formData);
+const loginStore = useLoginStore();
+
+const { push } = useRouter();
+const { add } = useToast();
+
+const handleLoginSubmit = async (formData: ILoginMutation) => {
+	try {
+		console.log('Получены данные из формы:', formData);
+		await loginStore.login(formData);
+		await push('/');
+	} catch (err) {
+		console.log(err);
+		if (isAxiosError(err) && err.response) {
+			add({
+				severity: 'error',
+				summary: 'Ошибка',
+				detail: isArray(err.response.data.message)
+					? err.response.data.message.join(', ')
+					: err.response.data.message,
+				life: 3000,
+			});
+			return;
+		}
+	}
 };
 </script>

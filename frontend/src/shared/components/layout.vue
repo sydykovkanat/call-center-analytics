@@ -1,8 +1,10 @@
 <template>
+	<Toast />
+
 	<main class="flex h-screen">
 		<Sidebar />
 
-		<div class="flex-1 p-4 overflow-auto">
+		<div class="flex-1 p-4 overflow-auto relative">
 			<router-view />
 		</div>
 	</main>

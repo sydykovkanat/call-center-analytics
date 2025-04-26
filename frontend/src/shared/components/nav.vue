@@ -32,5 +32,10 @@ const items = [
 		icon: 'pi pi-fw pi-table',
 		to: '/detailing',
 	},
+	{
+		label: 'Настройки',
+		icon: 'pi pi-fw pi-cog',
+		to: '/settings',
+	},
 ];
 </script>
