@@ -9,3 +9,11 @@ export interface ICall {
 	category: 'billing' | 'technical' | 'general';
 	priority: number;
 }
+
+export interface ICallsFilters {
+	agentId?: string;
+	startDate: Date | null;
+	endDate: Date | null;
+	statuses: string[];
+	categories: string[];
+}

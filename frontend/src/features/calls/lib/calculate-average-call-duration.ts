@@ -14,3 +14,18 @@ export const calculateAverageCallDuration = (calls: ICall[]) => {
 
 	return totalDuration / completedCalls.length;
 };
+
+export const calculateDuration = (startTime: string, endTime: string) => {
+	const start = new Date(startTime);
+	const end = new Date(endTime);
+
+	if (isNaN(start.getTime()) || isNaN(end.getTime()) || start > end) {
+		return '';
+	}
+
+	const durationMs = end.getTime() - start.getTime();
+	const minutes = Math.floor(durationMs / 60000);
+	const seconds = Math.floor((durationMs % 60000) / 1000);
+
+	return `${minutes} мин ${seconds} сек`;
+};

@@ -16,3 +16,7 @@ export const CATEGORIES = [
 		label: 'General',
 	},
 ];
+
+export const getCategoryLabel = (category: string) => {
+	return CATEGORIES.find((item) => item.id === category)?.label || '';
+};

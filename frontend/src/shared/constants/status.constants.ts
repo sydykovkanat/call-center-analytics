@@ -16,3 +16,7 @@ export const STATUSES = [
 		label: 'Отклонённые',
 	},
 ];
+
+export const getStatusLabel = (status: string) => {
+	return STATUSES.find((item) => item.id === status)?.label || '';
+};

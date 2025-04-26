@@ -1,8 +1,8 @@
 <template>
-	<main class="flex">
+	<main class="flex h-screen">
 		<Sidebar />
 
-		<div class="flex-1 p-4">
+		<div class="flex-1 p-4 overflow-auto">
 			<router-view />
 		</div>
 	</main>

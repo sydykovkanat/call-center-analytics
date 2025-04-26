@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, type Ref, ref } from 'vue';
 
 import Loader from '@/shared/components/loader.vue';
 import { formatDuration } from '@/shared/lib';
@@ -44,18 +44,18 @@ import {
 	calculateAverageCallDuration,
 	calculateMissedCallPercentage,
 } from '@/features/calls/lib';
-import type { ICall } from '@/features/calls/types';
+import type { ICall, ICallsFilters } from '@/features/calls/types';
 
 const { calls, isCallsLoading } = useGetCalls();
 
-const filters = ref({
-	startDate: null as Date | null,
-	endDate: null as Date | null,
-	statuses: [] as string[],
-	categories: [] as string[],
+const filters: Ref<ICallsFilters> = ref({
+	startDate: null,
+	endDate: null,
+	statuses: [],
+	categories: [],
 });
 
-function applyFilters(calls: ICall[], filters: typeof filters.value) {
+function applyFilters(calls: ICall[], filters: ICallsFilters) {
 	return calls.filter((call) => {
 		if (filters.startDate && filters.endDate) {
 			const callDate = new Date(call.start_time);
