@@ -1,0 +1,222 @@
+[
+  {
+    "id": "1234567",
+    "caller_number": "+996555123456",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-10T10:23:45",
+    "end_time": "2025-04-10T10:34:12",
+    "status": "completed",
+    "agent_id": "A123",
+    "category": "billing",
+    "priority": 2
+  },
+  {
+    "id": "1234568",
+    "caller_number": "+996700987654",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-10T11:05:22",
+    "end_time": null,
+    "status": "missed",
+    "agent_id": "A456",
+    "category": "technical",
+    "priority": 3
+  },
+  {
+    "id": "1234569",
+    "caller_number": "+996777456123",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-10T12:37:10",
+    "end_time": "2025-04-10T12:52:52",
+    "status": "completed",
+    "agent_id": "A123",
+    "category": "general",
+    "priority": 1
+  },
+  {
+    "id": "1234570",
+    "caller_number": "+996555789012",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-10T14:15:33",
+    "end_time": null,
+    "status": "rejected",
+    "agent_id": "A789",
+    "category": "billing",
+    "priority": 2
+  },
+  {
+    "id": "1234571",
+    "caller_number": "+996700123789",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-10T15:42:19",
+    "end_time": "2025-04-10T15:48:45",
+    "status": "completed",
+    "agent_id": "A456",
+    "category": "technical",
+    "priority": 3
+  },
+  {
+    "id": "1234572",
+    "caller_number": "+996777654321",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-10T16:30:05",
+    "end_time": null,
+    "status": "missed",
+    "agent_id": "A123",
+    "category": "general",
+    "priority": 1
+  },
+  {
+    "id": "1234573",
+    "caller_number": "+996555234567",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-10T17:12:40",
+    "end_time": "2025-04-10T17:25:18",
+    "status": "completed",
+    "agent_id": "A789",
+    "category": "billing",
+    "priority": 2
+  },
+  {
+    "id": "1234574",
+    "caller_number": "+996700345678",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-10T18:05:55",
+    "end_time": null,
+    "status": "rejected",
+    "agent_id": "A456",
+    "category": "technical",
+    "priority": 3
+  },
+  {
+    "id": "1234575",
+    "caller_number": "+996777567890",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-10T19:20:30",
+    "end_time": "2025-04-10T19:36:42",
+    "status": "completed",
+    "agent_id": "A123",
+    "category": "general",
+    "priority": 1
+  },
+  {
+    "id": "1234576",
+    "caller_number": "+996555678901",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-10T20:10:15",
+    "end_time": null,
+    "status": "missed",
+    "agent_id": "A789",
+    "category": "billing",
+    "priority": 2
+  },
+  {
+    "id": "1234577",
+    "caller_number": "+996700456789",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-11T09:05:22",
+    "end_time": "2025-04-11T09:12:46",
+    "status": "completed",
+    "agent_id": "A456",
+    "category": "technical",
+    "priority": 3
+  },
+  {
+    "id": "1234578",
+    "caller_number": "+996777234567",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-11T10:30:10",
+    "end_time": "2025-04-11T10:42:35",
+    "status": "completed",
+    "agent_id": "A123",
+    "category": "general",
+    "priority": 1
+  },
+  {
+    "id": "1234579",
+    "caller_number": "+996555345678",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-11T11:15:33",
+    "end_time": null,
+    "status": "rejected",
+    "agent_id": "A789",
+    "category": "billing",
+    "priority": 2
+  },
+  {
+    "id": "1234580",
+    "caller_number": "+996700567890",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-11T12:42:19",
+    "end_time": "2025-04-11T12:53:07",
+    "status": "completed",
+    "agent_id": "A456",
+    "category": "technical",
+    "priority": 3
+  },
+  {
+    "id": "1234581",
+    "caller_number": "+996777123456",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-11T13:30:05",
+    "end_time": null,
+    "status": "missed",
+    "agent_id": "A123",
+    "category": "general",
+    "priority": 1
+  },
+  {
+    "id": "1234582",
+    "caller_number": "+996555456789",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-11T14:12:40",
+    "end_time": "2025-04-11T14:28:15",
+    "status": "completed",
+    "agent_id": "A789",
+    "category": "billing",
+    "priority": 2
+  },
+  {
+    "id": "1234583",
+    "caller_number": "+996700234567",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-11T15:05:55",
+    "end_time": null,
+    "status": "rejected",
+    "agent_id": "A456",
+    "category": "technical",
+    "priority": 3
+  },
+  {
+    "id": "1234584",
+    "caller_number": "+996777345678",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-11T16:20:30",
+    "end_time": "2025-04-11T16:30:42",
+    "status": "completed",
+    "agent_id": "A123",
+    "category": "general",
+    "priority": 1
+  },
+  {
+    "id": "1234585",
+    "caller_number": "+996555234567",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-11T17:10:15",
+    "end_time": null,
+    "status": "missed",
+    "agent_id": "A789",
+    "category": "billing",
+    "priority": 2
+  },
+  {
+    "id": "1234586",
+    "caller_number": "+996700123456",
+    "receiver_number": "+996705700700",
+    "start_time": "2025-04-12T09:30:22",
+    "end_time": "2025-04-12T09:45:16",
+    "status": "completed",
+    "agent_id": "A456",
+    "category": "technical",
+    "priority": 3
+  }
+]

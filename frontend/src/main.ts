@@ -1,12 +1,16 @@
 import { definePreset } from '@primeuix/themes';
 import Aura from '@primeuix/themes/aura';
+import { VueQueryPlugin } from '@tanstack/vue-query';
 import { createPinia } from 'pinia';
+import 'primeicons/primeicons.css';
 import PrimeVue from 'primevue/config';
+import ToastService from 'primevue/toastservice';
 import { createApp } from 'vue';
 
+import { ru } from '@/shared/locale/ru';
 import '@/shared/styles/main.css';
 
-import App from './App.vue';
+import App from './app.vue';
 import router from './router';
 
 const CustomPreset = definePreset(Aura, {
@@ -28,6 +32,7 @@ const CustomPreset = definePreset(Aura, {
 
 const app = createApp(App);
 app.use(PrimeVue, {
+	locale: ru,
 	theme: {
 		preset: CustomPreset,
 		options: {
@@ -37,5 +42,7 @@ app.use(PrimeVue, {
 });
 app.use(createPinia());
 app.use(router);
+app.use(VueQueryPlugin);
+app.use(ToastService);
 
 app.mount('#app');
