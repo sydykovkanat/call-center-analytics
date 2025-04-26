@@ -1,5 +1,9 @@
 export const CATEGORIES = [
 	{
+		id: [],
+		label: 'Все',
+	},
+	{
 		id: 'billing',
 		label: 'Billing',
 	},

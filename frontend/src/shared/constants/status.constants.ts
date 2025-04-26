@@ -1,5 +1,9 @@
 export const STATUSES = [
 	{
+		id: [],
+		label: 'Все',
+	},
+	{
 		id: 'completed',
 		label: 'Завершённые',
 	},
