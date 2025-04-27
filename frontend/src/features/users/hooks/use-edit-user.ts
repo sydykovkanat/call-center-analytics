@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from '@tanstack/vue-query';
 import { useToast } from 'primevue';
 
-import { usersService } from '@/features/users/services/users.service.ts';
+import { usersService } from '@/features/users/services/users.service';
 import type { IUserMutation } from '@/features/users/types';
 
 export function useEditUser() {

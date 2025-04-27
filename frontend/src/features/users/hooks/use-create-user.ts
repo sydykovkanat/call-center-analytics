@@ -24,12 +24,20 @@ export function useCreateUser() {
 			});
 		},
 		onError: (err) => {
-			if (isAxiosError(err) && err.response) {
-				const { data } = err.response;
+			if (
+				isAxiosError(err) &&
+				err.response &&
+				err.response.data &&
+				err.response.data.message
+			) {
+				const data = err.response.data as {
+					message: string | string[];
+				};
+
 				if (data) {
 					add({
 						summary: 'Ошибка',
-						detail: isArray(data) ? data[0].message : data.message,
+						detail: isArray(data) ? data.message[0] : data.message,
 						severity: 'error',
 						life: 3000,
 					});

@@ -1,6 +1,6 @@
 import { instance } from '@/shared/api/instance';
 
-import { type IUser } from '@/features/users/types';
+import type { IUser, IUserMutation } from '@/features/users/types';
 
 class UsersService {
 	async getAll() {

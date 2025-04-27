@@ -8,7 +8,13 @@
 					<InputIcon class="pi pi-search" />
 					<InputText
 						:value="search"
-						@input="($event) => $emit('update:search', $event.target.value)"
+						@input="
+							($event: Event) =>
+								$emit(
+									'update:search',
+									($event.target as HTMLInputElement).value,
+								)
+						"
 						placeholder="Поиск пользователя"
 					/>
 				</IconField>

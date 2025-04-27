@@ -61,24 +61,27 @@ const props = defineProps({
 });
 
 const emit = defineEmits(['update:filters']);
-
-function updateStartDateRange(dates: [Date, Date]) {
-	emit('update:filters', {
-		...props.filters,
-		startDate: dates[0],
-		endDate: dates[1],
-	});
+function updateStartDateRange(
+	dates: Date | Date[] | (Date | null)[] | undefined | null,
+) {
+	if (Array.isArray(dates)) {
+		emit('update:filters', {
+			...props.filters,
+			startDate: dates[0] ?? null,
+			endDate: dates[1] ?? null,
+		});
+	}
 }
 
-function updateStatuses(statusIds: string[]) {
-	emit('update:filters', { ...props.filters, statuses: statusIds });
+function updateStatuses(statusIds: string[] | undefined) {
+	emit('update:filters', { ...props.filters, statuses: statusIds ?? [] });
 }
 
-function updateCategories(categoryIds: string[]) {
-	emit('update:filters', { ...props.filters, categories: categoryIds });
+function updateCategories(categoryIds: string[] | undefined) {
+	emit('update:filters', { ...props.filters, categories: categoryIds ?? [] });
 }
 
 function updateAgentId(agentId: string | undefined) {
-	emit('update:filters', { ...props.filters, agentId });
+	emit('update:filters', { ...props.filters, agentId: agentId ?? null });
 }
 </script>

@@ -37,13 +37,12 @@ import { defineProps } from 'vue';
 
 import UserEditModal from '@/features/users/components/user-edit-modal.vue';
 import { useDeleteUser } from '@/features/users/hooks';
-import type { IUser } from '@/features/users/types';
 
 const { deleteUser } = useDeleteUser();
 
 const props = defineProps({
 	users: {
-		type: [] as () => Array<IUser>,
+		type: Array,
 		required: true,
 		default: () => [],
 	},

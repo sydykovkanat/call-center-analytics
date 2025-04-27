@@ -17,7 +17,7 @@ export enum UserRole {
 
 export interface IUserMutation {
 	email: string;
-	password: string;
+	password?: string;
 	displayName: string;
 	role: string;
 }

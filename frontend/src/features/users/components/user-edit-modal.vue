@@ -108,8 +108,20 @@ const initialValues = reactive({
 	role: props.user.role || 'USER',
 });
 
-const resolver = ({ values }) => {
-	const errors = {};
+const resolver = ({
+	values,
+}: {
+	values: {
+		displayName: string;
+		email: string;
+		role: string;
+	};
+}) => {
+	const errors: {
+		[key: string]: {
+			message: string;
+		}[];
+	} = {};
 
 	if (!values.displayName) {
 		errors.displayName = [{ message: 'Введите имя пользователя' }];
@@ -135,7 +147,17 @@ function handleCancel() {
 	visible.value = false;
 }
 
-async function onFormSubmit({ valid, values }) {
+async function onFormSubmit({
+	valid,
+	values,
+}: {
+	valid: boolean;
+	values: {
+		displayName: string;
+		email: string;
+		role: string;
+	};
+}) {
 	if (!valid) {
 		return;
 	}
