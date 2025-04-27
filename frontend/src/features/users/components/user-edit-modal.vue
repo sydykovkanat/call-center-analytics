@@ -140,10 +140,8 @@ async function onFormSubmit({ valid, values }) {
 		return;
 	}
 
-	console.log(props.user);
-
 	try {
-		await editUser({
+		editUser({
 			userId: props.user.id,
 			data: values,
 		});

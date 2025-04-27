@@ -1,4 +1,4 @@
-import { UserRole } from '@prisma/__generated__';
+import { UserRole } from '@prisma/client';
 import { IsEmail, IsEnum, MinLength } from 'class-validator';
 
 export class CreateUserDto {

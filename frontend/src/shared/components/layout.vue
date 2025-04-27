@@ -1,6 +1,4 @@
 <template>
-	<Toast />
-
 	<main class="flex h-screen">
 		<Sidebar />
 

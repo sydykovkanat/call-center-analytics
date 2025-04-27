@@ -3,7 +3,7 @@ import {
 	Injectable,
 	NotFoundException,
 } from '@nestjs/common';
-import { UserRole } from '@prisma/__generated__';
+import { UserRole } from '@prisma/client';
 import { hash } from 'argon2';
 import { randomUUID } from 'crypto';
 

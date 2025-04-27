@@ -1,5 +1,5 @@
 import { Body, Controller, Post, UseGuards } from '@nestjs/common';
-import { User } from '@prisma/__generated__';
+import { User } from '@prisma/client';
 
 import { CurrentUser } from '../users/decorators/current-user.decorator';
 import { LoginDto } from '../users/dto/login.dto';

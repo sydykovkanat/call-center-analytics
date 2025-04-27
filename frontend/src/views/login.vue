@@ -40,11 +40,9 @@ const { add } = useToast();
 
 const handleLoginSubmit = async (formData: ILoginMutation) => {
 	try {
-		console.log('Получены данные из формы:', formData);
 		await loginStore.login(formData);
 		await push('/');
 	} catch (err) {
-		console.log(err);
 		if (isAxiosError(err) && err.response) {
 			add({
 				severity: 'error',
@@ -54,7 +52,13 @@ const handleLoginSubmit = async (formData: ILoginMutation) => {
 					: err.response.data.message,
 				life: 3000,
 			});
-			return;
+		} else {
+			add({
+				severity: 'error',
+				summary: 'Ошибка',
+				detail: 'Неизвестная ошибка. Попробуйте позже.',
+				life: 3000,
+			});
 		}
 	}
 };

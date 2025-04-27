@@ -9,7 +9,7 @@ import {
 	Put,
 	UseGuards,
 } from '@nestjs/common';
-import { User } from '@prisma/__generated__';
+import { User } from '@prisma/client';
 
 import { Auth } from '../auth/decorators/auth.decorator';
 import { TokenAuthGuard } from '../auth/guard/token-auth.guard';
