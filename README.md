@@ -64,6 +64,14 @@
    ```
    bun run dev
    ```
+   
+## Тестовые пользователи
+
+	john@icloud.com
+    123qwe
+
+    alice@icloud.com
+    123qwe
 
 ## Доступные скрипты
 
