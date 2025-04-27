@@ -20,4 +20,20 @@ export default defineConfig({
 			'@': fileURLToPath(new URL('./src', import.meta.url)),
 		},
 	},
+	server: {
+		host: '0.0.0.0',
+		port: 3000,
+		allowedHosts: ['kanat.fun', 'localhost', '0.0.0.0'],
+		cors: {
+			origin: ['http://localhost:3000', 'https://tasker.shoro.kg'],
+		},
+	},
+	preview: {
+		host: '0.0.0.0',
+		port: 3000,
+		allowedHosts: ['kanat.fun', 'localhost', '0.0.0.0'],
+		cors: {
+			origin: ['http://localhost:3000', 'https://tasker.shoro.kg'],
+		},
+	},
 });
